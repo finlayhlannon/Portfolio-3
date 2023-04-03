@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finlay Hlannon</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div>
+		<section class="wheading">
+			<div class="logo">
+				<img id="logo-image" src="static/plogo.png" alt="logo">
+			</div>
+		</section>
+		<section class="sunset-image">
+			<div>
+				<img id="sunset-image" src="static/sunset.png" alt="sunset">
+			</div>
+		</section>
+		<section class="content">
+			<section class="title-box">
+				<div class="title">
+					<h><span class="highlight">Hello! I'm Finlay.</span> 👋</h>
+				</div>
+				<div class="subtitle">
+					<h>I am a student with a passion for <h style="color: rgb(139, 76, 180);">design</h> and <h style="color: rgb(139, 76, 180);">development.</h></h>
+				</div>
+			</section>
+			<section class="title-box">
+				<div class="title">
+					<h><span class="highlight">Projects</span>💻</h>
+				</div>
+				<div class="subtitle">
+					<p>Hover over a project to learn more.</p>
+				</div>
+			</section>
+			<section class="title-box">
+				<div class="title">
+					<h><span class="highlight">About me</span>🌻</h>
+				</div>
+				<div class="subtitle">
+					<p>Hi there! My name is Finlay Hlannon. I am currently a student at <span class="link">SMUS</span>, and coding & web development are some of my main passions. I also like to spend time playing sports, being outdoors, or drawing. Thanks for stopping by 😊</p>
+				</div>
+			</section>
+			<section class="title-box">
+				<div class="title">
+					<h><span class="highlight">My skills</span>💡</h>
+				</div>
+				<img class="skills-image" src="static/skills.png">
+			</section>
+		</section>
+	</div>
+	<script>
+		
+
+		window.addEventListener('load', function() {
+			const title = document.querySelector('.content');
+			document.querySelector('body').classList.add('body-anim');
+			title.classList.add('content-anim');
+			window.scrollTo(0, 0);
+			history.scrollRestoration = 'manual';
+		});
+
+	</script>
+</body>
+</html>
