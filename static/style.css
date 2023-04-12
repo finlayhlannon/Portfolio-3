@@ -181,19 +181,19 @@ body {
     transition: opacity 0.5s;
   }
   .chatroom:hover img {
-    content: url('./Chatroom dark.png');
+    content: url('Chatroom dark.png');
   }
 
   .reminders:hover img {
-    content: url('./24hrs dark.png');
+    content: url('24hrs dark.png');
   }
 
   .mybadges:hover img {
-    content: url('./My Badges dark.png');
+    content: url('My Badges dark.png');
   }
 
   .jotspace:hover img {
-    content: url('./Jotspace dark.png');
+    content: url('Jotspace dark.png');
   }
 
 
