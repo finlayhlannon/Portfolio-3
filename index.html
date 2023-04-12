@@ -4,6 +4,7 @@
 	<title>Finlay Hlannon</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="static/style.css">
+	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 	<div>
@@ -33,7 +34,14 @@
 				<div class="subtitle">
 					<p>Hover over a project to learn more.</p>
 				</div>
+				<div class="projects">
+					<a href="https://chatroom.vercel.app" class="chatroom" id="chatroom-image"><img src="static/Chatroom.png"></a>
+					<a href="https://24hrs.vercel.app" class="reminders" id="reminders-image"><img src="static/24hrs.png"></a>
+					<a href="https://mybadges.vercel.app" class="mybadges" id="mybadges-image"><img src="static/MyBadges.png"></a>
+					<a href="https://jotspace.vercel.app" class="jotspace" id="jotspace-image"><img src="static/Jotspace.png"></a>
+				</div>
 			</section>
+			<div class="aboutmebox">
 			<section class="title-box">
 				<div class="title">
 					<h><span class="highlight">About me</span>🌻</h>
@@ -42,6 +50,7 @@
 					<p>Hi there! My name is Finlay Hlannon. I am currently a student at <span class="link">SMUS</span>, and coding & web development are some of my main passions. I also like to spend time playing sports, being outdoors, or drawing. Thanks for stopping by 😊</p>
 				</div>
 			</section>
+			</div>
 			<section class="title-box">
 				<div class="title">
 					<h><span class="highlight">My skills</span>💡</h>
@@ -51,7 +60,6 @@
 		</section>
 	</div>
 	<script>
-		
 
 		window.addEventListener('load', function() {
 			const title = document.querySelector('.content');
@@ -60,7 +68,6 @@
 			window.scrollTo(0, 0);
 			history.scrollRestoration = 'manual';
 		});
-
 	</script>
 </body>
 </html>
