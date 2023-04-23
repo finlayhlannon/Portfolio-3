@@ -85,7 +85,7 @@ body {
   }
 
   .title-box {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     padding: 50px;
     display: flex;
     height: 70vh;
@@ -181,19 +181,21 @@ body {
     transition: opacity 0.5s;
   }
   .chatroom:hover img {
-    content: url('chatroom dark.png');
+    content: url('Chatroom.png');
+    content: url('Chatroom dark.png');
   }
 
   .reminders:hover img {
+    content: url('24hrs.png');
     content: url('24hrs dark.png');
   }
 
   .mybadges:hover img {
-    content: url('my badges dark.png');
+    content: url('My Badges dark.png');
   }
 
   .jotspace:hover img {
-    content: url('jotspace dark.png');
+    content: url('Jotspace dark.png');
   }
 
 
@@ -236,55 +238,31 @@ body {
     align-items: center;
   }
   
-  /* Media queries
-  @media only screen and (max-width: 768px) {
-    .header h1 {
-      font-size: 40px;
-    }
-    .header p {
-      font-size: 16px;
-    }
-    .about {
-      flex-direction: column;
-      text-align: center;
-    }
-    .about p {
-      width: 100%;
-    }
-  }
   
-  @media only screen and (max-width: 600px) {
-    .header h1 {
-      font-size: 30px;
+  @media (max-width: 1200px) {
+    .title {
+      font-size: 48px;
     }
-    .header p {
-      font-size: 14px;
+    .title-box{
+      background-color:none;
+      margin-bottom: -1000px;
+      padding:none;
+    }
+    .content{
+      background-color: none;
+    }
+    .sunset-image {
+      z-index: -1000;
+      left:0vw;
     }
     .about h2 {
-      font-size: 30px;
+      font-size: 28px;
     }
     .about p {
       font-size: 16px;
     }
     .projects h2 {
-      font-size: 30px;
+      font-size: 28px;
     }
   }
   
-  @media only screen and (max-width: 400px) {
-    .header h1 {
-    font-size: 20px;
-    }
-    .header p {
-    font-size: 12px;
-    }
-    .about h2 {
-    font-size: 20px;
-    }
-    .about p {
-    font-size: 14px;
-    }
-    .projects h2 {
-    font-size: 20px;
-    }
-    }*/
