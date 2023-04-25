@@ -11,6 +11,7 @@ body {
 
 .content{
   transform: translateY(200px);
+  height: 2500px;
 }
 .content-anim {
   transform: translateY(0);
