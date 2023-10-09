@@ -5,6 +5,296 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="static/style.css">
 	<link rel="icon" type="image/png" href="favicon.png">
+	<style>
+		/* Global styles */
+body {
+  opacity: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  transform: translateY(0px);
+}
+
+/* WebKit-based browsers */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(203, 150, 203);
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #ff000000;
+    border-radius: 6px;
+  }
+
+.content{
+  transform: translateY(200px);
+  height: 2500px;
+}
+.content-anim {
+  transform: translateY(0);
+  transition: transform 1s ease;
+}
+
+.body-anim {
+  opacity: 100;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.no-anim {
+	animation: none !important;
+}
+
+.wheading,
+.pheading {
+  animation: none !important;
+}
+
+.highlight {
+  text-shadow: 0px 0.5rem 0.6rem rgba(203, 150, 203);
+}
+
+@font-face {
+  font-family: 'Pencil';
+  src: url('/static/pencil.otf') format('truetype');
+}
+
+.wheading {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 5%;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0px;
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  z-index: 999;
+  transition: background-color 0.5s ease;
+}
+
+.pheading {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(203, 150, 203, 1);
+  padding: 0px;
+  display: flex;
+  height: 50px;
+  flex-direction: column;
+  z-index: 999;
+  transition: background-color 0.5s ease;
+}
+
+.logo {
+  transform: scale(20%);
+  margin-top: -50px;
+  justify-content: left;
+  align-items: left;
+  margin-left: 0px;
+}
+
+  .sunset-image{
+    position: absolute;
+    top: 0px;
+    right:0px;
+    z-index: 999;
+  }
+
+  .title-box {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 50px;
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    margin-top: 0px;
+    position: relative;
+    top:-450px;
+  }
+  .title {
+    color: #000000;
+    font-size: 40px;
+    padding: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 120px;
+    margin-left: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-stretch: wider;
+  }
+
+  .subtitle {
+    color: #7c7c7c;
+    font-size: 20px;
+    padding: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: -80px;
+    margin-left:50px;
+    font-family: sans-serif;
+    font-variant: normal;
+    max-width:600px;
+  }
+  .pencil {
+    color: #3d3d3d;
+    font-size: 45px;
+    padding: 0px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 0px;
+    margin-left:1030px;
+    font-family: 'Pencil', sans-serif;
+    font-variant: normal;
+    transform: rotate(15deg);
+  }
+
+  .aboutmebox {
+    margin-top:500px;
+  }
+  .about-me-title {
+    color: #c4c4c4;
+    font-size: 100px;
+    padding: 20px;
+    display: flex;
+    align-items: left;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    font-stretch: ultra-condensed;
+    margin-left: 10px;
+  }
+  .about-me {
+    color: #000000;
+    font-size: 20px;
+    padding: 0px;
+    display: flex;
+    align-items: left;
+    margin-left: 75px;
+
+  }
+  .mephoto{
+    position: absolute;
+    left:750px;
+    scale:90%;
+    top:150px;
+  }
+
+  .skills-image{
+    transform: scale(50%);
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+  }
+
+  .projects {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    font-size: 10px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:-50px;
+    transition: transform 1s ease;
+  }
+  .projects img {
+    transition: opacity 0.5s;
+  }
+  .chatroom:hover img {
+    content: url('chatroom.png');
+    content: url('chatroom dark.png');
+  }
+
+  .reminders:hover img {
+    content: url('24hrs.png');
+    content: url('24hrs dark.png');
+  }
+
+  .mybadges:hover img {
+    content: url('my badges dark.png');
+  }
+
+  .jotspace:hover img {
+    content: url('jotspace dark.png');
+  }
+
+
+  .chatroom{
+    position: absolute;
+    scale: 50%;
+    top:250px;
+    left:650px;
+    z-index: 999;
+  }
+  .reminders{
+    position: absolute;
+    scale: 60%;
+    top:800px;
+    left:600px;
+    z-index: 999;
+  }
+  .mybadges{
+    position: absolute;
+    scale: 70%;
+    top:600px;
+    left:200px;
+    z-index: 999;
+  }
+  .jotspace{
+    position: absolute;
+    scale: 60%;
+    top:300px;
+    left:0px;
+    z-index: 999;
+  }
+
+  .footer {
+    background-color: rgb(163, 163, 163);
+    color: #000000;
+    font-size: 100px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  @media (max-width: 1200px) {
+    .title {
+      font-size: 48px;
+    }
+    .title-box{
+      background-color:none;
+      margin-bottom: -30vh;
+      padding:none;
+    }
+    .content{
+      background-color: none;
+    }
+    .sunset-image {
+      z-index: -1000;
+      left:0vw;
+    }
+    .about h2 {
+      font-size: 28px;
+    }
+    .about p {
+      font-size: 16px;
+    }
+    .projects h2 {
+      font-size: 28px;
+    }
+  }
+  
+	</style>
 </head>
 <body>
 	<div>
@@ -15,7 +305,7 @@
 		</section>
 		<section class="sunset-image">
 			<div>
-				<img id="sunset-image" src="static/sunset.png" alt="sunset">
+				<img id="sunset-image" src="static/Finlay Beach.png" alt="sunset">
 			</div>
 		</section>
 		<section class="content">
@@ -35,7 +325,7 @@
 					<p>Hover over a project to learn more.</p>
 				</div>
 				<div class="projects">
-					<a href="https://chitchats.vercel.app" class="chatroom" id="chatroom-image"><img src="static/Chatroom.png"></a>
+					<a href="https://chatroom.vercel.app" class="chatroom" id="chatroom-image"><img src="static/Chatroom.png"></a>
 					<a href="https://24hrs.vercel.app" class="reminders" id="reminders-image"><img src="static/24hrs.png"></a>
 					<a href="https://mybadges.vercel.app" class="mybadges" id="mybadges-image"><img src="static/MyBadges.png"></a>
 					<a href="https://jotspace.vercel.app" class="jotspace" id="jotspace-image"><img src="static/Jotspace.png"></a>
@@ -47,8 +337,9 @@
 					<h><span class="highlight">About me</span>🌻</h>
 				</div>
 				<div class="subtitle">
-					<p>Hi there! My name is Finlay Hlannon. I am currently a student at <span class="link">SMUS</span>, and coding & web development are some of my main passions. I also like to spend time playing sports, being outdoors, or drawing. Thanks for stopping by 😊</p>
+					<p>Hi there! My name is Finlay Hlannon. I am currently a student at <span class="link">SMUS</span>, and coding & web development are some of my main passions. I also like to spend time playing sports, being outdoors, and creating art. Thanks for stopping by!</p>
 				</div>
+				<!--<img src="static/Surfing Group Photo Edited 2.png" class="mephoto">-->
 			</section>
 			</div>
 			<section class="title-box">
