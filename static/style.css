@@ -159,6 +159,14 @@ body {
     margin-left: 75px;
 
   }
+  .mephoto{
+    position: absolute;
+    left:640px;
+    scale:90%;
+    top:150px;
+    opacity: 80%;
+    z-index: -99999;
+  }
 
   .skills-image{
     transform: scale(50%);
